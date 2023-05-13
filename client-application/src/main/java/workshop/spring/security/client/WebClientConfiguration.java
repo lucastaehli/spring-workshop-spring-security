@@ -19,6 +19,7 @@ public class WebClientConfiguration {
     public RestTemplate restTemplate() {
         return new RestTemplateBuilder()
                 .uriTemplateHandler(new DefaultUriBuilderFactory(config.getResourceUrl()))
+                .defaultHeader("Authorization", "Basic bWFuYWdlbWVudDptYW5hZ2VtZW50")
                 .build();
     }
 }
